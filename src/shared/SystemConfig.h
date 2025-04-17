@@ -98,6 +98,11 @@
 # define _AUCTIONHOUSEBOT_CONFIG   SYSCONFDIR"ahbot.conf"
 #endif
 
+#ifdef ENABLE_PLAYERBOTS
+    #define _D_PLAYERBOTS_CONFIG SYSCONFDIR"aiplayerbot.conf"
+    #define _PLAYERBOTS_CONFIG MaNGOS::Singleton<std::string>::Instance()
+ #endif
+ 
 #define _FULLVERSION(REVD,REVH) _PACKAGENAME "/" _VERSION(REVD,REVH) " for " _ENDIAN_PLATFORM
 
 #define DEFAULT_PLAYER_LIMIT 100
